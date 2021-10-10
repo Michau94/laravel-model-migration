@@ -14,7 +14,7 @@
                     <a class="nav-link" href="{{ route('trips') }}">Our Trips</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="{{ route('about') }}">About</a>
                 </li>
             </ul>
         </div>

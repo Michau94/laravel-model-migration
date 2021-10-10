@@ -6,7 +6,7 @@
 @section('content')
     <section class="container ">
 
-        <div class="row py-2">
+        <div class="row py-2 justify-content-center">
             @forelse ($trips as $trip)
                 <div class="col-3">
                     @include('partials.card', ['trip' => $trip])

@@ -11243,3 +11243,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#welcome {
+  height: calc(100vh - 56px);
+}
