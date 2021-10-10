@@ -17,8 +17,13 @@ class HomeController extends Controller
     public function trips()
     {
         $trips = Trip::all();
-        dump($trips);
         return view('trips.index', compact('trips'));
+    }
+
+    public function tripShow($id)
+    {
+        $trip = Trip::findOrFail($id);
+        return view('trips.show', compact('trip'));
     }
 
     public function about()

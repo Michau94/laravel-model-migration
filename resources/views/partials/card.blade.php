@@ -5,6 +5,6 @@
     <div class="card-body">
         <h5 class="card-title">{{ $trip->name }}</h5>
         <p class="card-text">{{ $trip->description }}</p>
-        <a href="" class="btn btn-primary">Find Out More</a>
+        <a href="{{ route('show', ['id' => $trip->id]) }}" class="btn btn-primary">Find Out More</a>
     </div>
 </div>
