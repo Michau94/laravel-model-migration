@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('home') }}"> My travel</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -8,13 +8,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link {{ Request::route()->getName() == 'home' ? 'active' : ' ' }}"
+                        aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('trips') }}">Our Trips</a>
+                    <a class="nav-link {{ Request::route()->getName() == 'trips' ? 'active' : ' ' }}"
+                        href="{{ route('trips') }}">Our
+                        Trips</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">About</a>
+                    <a class="nav-link {{ Request::route()->getName() == 'about' ? 'active' : ' ' }}"
+                        href="{{ route('about') }}">About</a>
                 </li>
             </ul>
         </div>

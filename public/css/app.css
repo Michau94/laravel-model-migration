@@ -11243,6 +11243,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.card {
+  min-height: 400px;
+}
+
 #welcome {
   height: calc(100vh - 56px);
 }
