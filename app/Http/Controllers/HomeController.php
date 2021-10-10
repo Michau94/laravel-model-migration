@@ -16,4 +16,9 @@ class HomeController extends Controller
     {
         return view('trips.index');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

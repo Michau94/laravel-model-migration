@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/trips', 'HomeController@trips')->name('trips');
+
+Route::get('/about', 'HomeController@about')->name('about');
