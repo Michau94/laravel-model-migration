@@ -4,7 +4,21 @@
 
 
 @section('content')
-    @include('partials.card')
+    <section class="container ">
+
+        <div class="row py-2">
+            @forelse ($trips as $trip)
+                <div class="col-3">
+                    @include('partials.card', ['trips' => $trip])
+                </div>
+
+            @empty
+
+                <h1>No trips available!</h1>
+
+            @endforelse
+        </div>
+    </section>
 
 
 @endsection

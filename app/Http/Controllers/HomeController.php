@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Trip;
+
 class HomeController extends Controller
 {
     public function index()
@@ -14,7 +16,9 @@ class HomeController extends Controller
 
     public function trips()
     {
-        return view('trips.index');
+        $trips = Trip::all();
+        dump($trips);
+        return view('trips.index', compact('trips'));
     }
 
     public function about()
